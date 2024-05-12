@@ -1,0 +1,31 @@
+<mat-stepper #stepper>
+  <mat-step [stepControl]="firstFormGroup">
+    <form [formGroup]="firstFormGroup">
+      <ng-template matStepLabel>Выбор анкет</ng-template>
+      <ng-template matStepContent>
+        <p>This content was rendered lazily</p>
+        <button mat-button matStepperNext>К следующему шагу</button>
+      </ng-template>
+    </form>
+  </mat-step>
+  <mat-step [stepControl]="secondFormGroup" label="Сайзинг">
+    <form [formGroup]="secondFormGroup">
+      <expansion-overview-example></expansion-overview-example>
+      <expansion-overview2></expansion-overview2>
+      <button mat-button matStepperPrevious>Назад</button>
+      <button mat-button matStepperNext>К следующему шагу</button>
+    </form>
+  </mat-step>
+  <mat-step [stepControl]="thirdFormGroup">
+    <form [formGroup]="thirdFormGroup">
+      <ng-template matStepLabel>Калькулятор</ng-template>
+      <expansion-overview3></expansion-overview3>
+      <expansion-overview4></expansion-overview4>
+      <button mat-button matStepperPrevious>Назад</button>
+    </form>
+  </mat-step>
+</mat-stepper>
+
+<!-- Copyright 2024 Google LLC. All Rights Reserved.
+    Use of this source code is governed by an MIT-style license that
+    can be found in the LICENSE file at https://angular.io/license -->
