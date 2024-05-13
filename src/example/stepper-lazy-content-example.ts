@@ -11,6 +11,11 @@ import { ExpansionOverviewExample } from '../card1/expansion-overview-example';
 import { ExpansionOverview2 } from '../card2/expansion-overview2';
 import { ExpansionOverview3 } from '../card3/expansion-overview3';
 import { ExpansionOverview4 } from '../card4/expansion-overview4';
+import { ExpansionSpec1 } from '../specs/card1/expansion-specs-1';
+import { ExpansionSpec2 } from '../specs/card2/expansion-spec-2';
+import { ExpansionSpecMain } from '../specs/mainCard/expansion-specs-main';
+import { MatCardModule } from '@angular/material/card';
+import { TableAnkets } from '../ankets/table/table-anket';
 
 /**
  * @title Stepper lazy content rendering
@@ -18,6 +23,7 @@ import { ExpansionOverview4 } from '../card4/expansion-overview4';
 @Component({
   selector: 'stepper-lazy-content-example',
   templateUrl: 'stepper-lazy-content-example.html',
+  styleUrl: 'stepper-lazy-content-example.css',
   standalone: true,
   imports: [
     MatStepperModule,
@@ -28,6 +34,11 @@ import { ExpansionOverview4 } from '../card4/expansion-overview4';
     ExpansionOverview4,
     FormsModule,
     ReactiveFormsModule,
+    ExpansionSpec1,
+    ExpansionSpec2,
+    ExpansionSpecMain,
+    MatCardModule,
+    TableAnkets,
   ],
 })
 export class StepperLazyContentExample {

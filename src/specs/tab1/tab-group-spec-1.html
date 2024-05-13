@@ -1,0 +1,71 @@
+<!-- #docregion dynamic-height -->
+<mat-tab-group dynamicHeight color="accent">
+  <!-- #enddocregion dynamic-height -->
+  <mat-tab label="Sandbox">
+    <!-- <grid-list-overview-example></grid-list-overview-example> -->
+    <div class="toggles">
+      <mat-form-field class="example-form-field">
+        <mat-label>Название</mat-label>
+        <input matInput type="text" value="Площадка 1 Sandbox">
+      </mat-form-field>
+      <mat-form-field class="example-form-field">
+        <mat-label>Время действия лицензии, месяцев</mat-label>
+        <input matInput type="number">
+      </mat-form-field>
+      <mat-form-field class="example-form-field">
+        <mat-label>Уровень технической поддержки</mat-label>
+        <mat-select value="STANDART">
+          <mat-option value="ENHANCED, 24x7">ENHANCED, 24x7</mat-option>
+          <mat-option value="ENHANCED, 8x5">ENHANCED, 8x5</mat-option>
+          <mat-option value="PREMIUM, 24x7">PREMIUM, 24x7</mat-option>
+          <mat-option value="PREMIUM, 8x5">PREMIUM, 8x5</mat-option>
+          <mat-option value="STANDART">STANDART</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <div class="toggles">
+        <mat-slide-toggle color="primary">Бессрочная</mat-slide-toggle>
+        <mat-slide-toggle color="primary">Продление</mat-slide-toggle>
+        <mat-slide-toggle color="primary">Активен</mat-slide-toggle>
+      </div>
+    </div>
+    <table-basic-example></table-basic-example>
+  </mat-tab>
+  <mat-tab label="SIEM">
+    <!-- <grid-list-overview-example></grid-list-overview-example> -->
+    <div class="toggles">
+      <mat-form-field class="example-form-field">
+        <mat-label>Название</mat-label>
+        <input matInput type="text" value="Площадка 1 SIEM">
+      </mat-form-field>
+      <mat-form-field class="example-form-field">
+        <mat-label>Время действия лицензии, месяцев</mat-label>
+        <input matInput type="number">
+      </mat-form-field>
+      <mat-form-field  class="example-form-field">
+        <mat-label>Уровень технической поддержки</mat-label>
+        <mat-select value="STANDART">
+          <mat-option value="ENHANCED, 24x7">ENHANCED, 24x7</mat-option>
+          <mat-option value="ENHANCED, 8x5">ENHANCED, 8x5</mat-option>
+          <mat-option value="PREMIUM, 24x7">PREMIUM, 24x7</mat-option>
+          <mat-option value="PREMIUM, 8x5">PREMIUM, 8x5</mat-option>
+          <mat-option value="STANDART">STANDART</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <div class="toggles">
+        <mat-slide-toggle color="primary">Бессрочная</mat-slide-toggle>
+        <mat-slide-toggle color="primary">Продление</mat-slide-toggle>
+        <mat-slide-toggle color="primary">Активен</mat-slide-toggle>
+      </div>
+    </div>
+    <table-basic-example></table-basic-example>
+  </mat-tab>
+  <mat-tab>
+    <ng-template mat-tab-label style="max-width: 10px; min-width: 10px;">
+        <span style="max-width: 10px; min-width: 10px;">+</span>
+    </ng-template>
+  </mat-tab>
+  </mat-tab-group>
+
+<!-- Copyright 2024 Google LLC. All Rights Reserved.
+      Use of this source code is governed by an MIT-style license that
+      can be found in the LICENSE file at https://angular.io/license -->

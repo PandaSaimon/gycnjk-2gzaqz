@@ -1,0 +1,6 @@
+.footer {
+    width: inherit;
+    margin-bottom: 15px;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+}

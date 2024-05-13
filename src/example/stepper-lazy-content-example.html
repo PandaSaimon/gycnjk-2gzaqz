@@ -1,14 +1,15 @@
-<mat-stepper #stepper>
+<mat-stepper #stepper  color="accent">
   <mat-step [stepControl]="firstFormGroup">
     <form [formGroup]="firstFormGroup">
       <ng-template matStepLabel>Выбор анкет</ng-template>
       <ng-template matStepContent>
         <p>This content was rendered lazily</p>
+        <table-anket></table-anket>
         <button mat-button matStepperNext>К следующему шагу</button>
       </ng-template>
     </form>
   </mat-step>
-  <mat-step [stepControl]="secondFormGroup" label="Сайзинг">
+  <mat-step [stepControl]="secondFormGroup" label="Конфигуратор">
     <form [formGroup]="secondFormGroup">
       <expansion-overview-example></expansion-overview-example>
       <expansion-overview2></expansion-overview2>
@@ -19,9 +20,15 @@
   <mat-step [stepControl]="thirdFormGroup">
     <form [formGroup]="thirdFormGroup">
       <ng-template matStepLabel>Калькулятор</ng-template>
-      <expansion-overview3></expansion-overview3>
-      <expansion-overview4></expansion-overview4>
-      <button mat-button matStepperPrevious>Назад</button>
+      <expansion-specs-main></expansion-specs-main>
+      <expansion-specs-1></expansion-specs-1>
+      <expansion-spec-2></expansion-spec-2>
+      <mat-card fxLayout="row" fxLayoutGap="5%" class="footer">
+        <mat-card-actions>
+          <button mat-button color="primary" matStepperPrevious>Назад</button>
+          <button mat-button color="primary">Печать</button>
+        </mat-card-actions>
+      </mat-card>
     </form>
   </mat-step>
 </mat-stepper>

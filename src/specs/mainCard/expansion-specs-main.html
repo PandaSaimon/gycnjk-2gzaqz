@@ -1,0 +1,70 @@
+<mat-accordion>
+  <mat-expansion-panel
+    [expanded]="true"
+    hideToggle
+    style="margin-bottom: 15px"
+  >
+    <mat-expansion-panel-header>
+      <mat-panel-title>Основная информация</mat-panel-title>
+      <!-- <mat-panel-description></mat-panel-description> -->
+    </mat-expansion-panel-header>
+    <mat-form-field class="example-form-field">
+      <mat-label>Название спецификации</mat-label>
+      <input matInput type="text" value="000615">
+    </mat-form-field>
+    <mat-form-field  class="example-form-field">
+      <mat-label>Заказ 1С</mat-label>
+      <mat-select>
+        <mat-option value="0000033763">0000033763</mat-option>
+        <mat-option value="0000033762">0000033762</mat-option>
+        <mat-option value="0000033761">0000033761</mat-option>
+        <mat-option value="0000033760">0000033760</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field  class="example-form-field">
+      <mat-label>Вид прайса</mat-label>
+      <mat-select value="Обычный">
+        <mat-option value="Обычный">Обычный</mat-option>
+        <mat-option value="Спецпозиции 1">Спецпозиции 1</mat-option>
+        <mat-option value="Спецпозиции 2">Спецпозиции 2</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field  class="example-form-field">
+      <mat-label>Тип прайса</mat-label>
+      <mat-select value="Текущий">
+        <mat-option value="Предыдущий">Предыдущий</mat-option>
+        <mat-option value="Текущий">Текущий</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field  class="example-form-field">
+      <mat-label>Страна резидента</mat-label>
+      <mat-select value="Россия">
+        <mat-option value="Армения">Армения</mat-option>
+        <mat-option value="Беларусь">Беларусь</mat-option>
+        <mat-option value="Казахстан">Казахстан</mat-option>
+        <mat-option value="Кыргызстан">Кыргызстан</mat-option>
+        <mat-option value="Россия">Россия</mat-option>
+        <mat-option value="Таджикистан">Таджикистан</mat-option>
+        <mat-option value="Узбекистан">Узбекистан</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field  class="example-form-field">
+      <mat-label>Поставщик</mat-label>
+      <mat-select value="PT">
+        <mat-option value="PT">PT</mat-option>
+        <mat-option value="PTGS">PTGS</mat-option>
+        <mat-option value="ПроТех">ПроТех</mat-option>
+        <mat-option value="ПТ">ПТ</mat-option>
+        <mat-option value="ТОО">ТОО</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </mat-expansion-panel>
+</mat-accordion>
+
+<!-- Copyright 2024 Google LLC. All Rights Reserved.
+      Use of this source code is governed by an MIT-style license that
+      can be found in the LICENSE file at https://angular.io/license -->
+
+<!-- Copyright 2024 Google LLC. All Rights Reserved.
+    Use of this source code is governed by an MIT-style license that
+    can be found in the LICENSE file at https://angular.io/license -->
