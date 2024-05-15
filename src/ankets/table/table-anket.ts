@@ -25,6 +25,7 @@ export interface PeriodicElement {
   name: string;
   id: number;
   version: number;
+  product: string;
   parameters: Parameter[];
 }
 
@@ -33,6 +34,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
     id: 1,
     name: 'Анкета 1',
     version: 0,
+    product: "Sandbox",
     parameters: [
       {
         id: 1,
@@ -94,6 +96,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
     id: 2,
     name: 'Анкета 2',
     version: 0,
+    product: "NGFW",
     parameters: [
       {
         id: 1,
@@ -155,6 +158,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
     id: 3,
     name: 'Анкета 3',
     version: 0,
+    product: "SIEM",
     parameters: [
       {
         id: 1,
@@ -216,6 +220,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
     id: 4,
     name: 'Анкета 4',
     version: 0,
+    product: "VM",
     parameters: [
       {
         id: 1,
@@ -293,7 +298,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
   imports: [MatTableModule, MatButtonModule, MatCheckboxModule, MatSelectModule, MatFormFieldModule, MatIconModule, MatExpansionModule, TableParams],
 })
 export class TableAnkets {
-  displayedColumns: string[] = ['select', 'name', 'version', 'expand'];
+  displayedColumns: string[] = ['select', 'name', 'version', 'product', 'expand'];
   dataSource = ELEMENT_DATA;
   selection = new SelectionModel<PeriodicElement>(true, []);
   expandedElement: PeriodicElement | null;
