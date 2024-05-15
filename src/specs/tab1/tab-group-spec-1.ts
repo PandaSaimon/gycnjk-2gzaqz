@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
+import { MatIconModule } from '@angular/material/icon';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatButtonModule } from '@angular/material/button';
 import { TableBasicExample } from '../table/table-basic-example';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatSelectModule } from '@angular/material/select';
 import { MatInputModule } from '@angular/material/input';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
 
 /**
  * @title Tab group with dynamic height based on tab contents
@@ -15,12 +17,14 @@ import { MatInputModule } from '@angular/material/input';
   styleUrl: 'tab-group-spec-1.css',
   standalone: true,
   imports: [
+    MatIconModule,
     MatTabsModule,
     MatButtonModule,
     TableBasicExample,
     MatSlideToggleModule,
     MatSelectModule,
     MatInputModule,
+    MatButtonToggleModule
   ],
 }) 
 export class TabGroupDynamicHeightExample {}

@@ -34,3 +34,8 @@ mat-slide-toggle {
   min-width: 350px;
   margin-right: 15px;
 }
+
+.example-form-full-field {
+  min-width: 100%;
+  margin-right: 15px;
+}

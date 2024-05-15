@@ -7,6 +7,8 @@ import {
 } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatStepperModule } from '@angular/material/stepper';
+import { MatSelectModule } from '@angular/material/select';
+import { MatFormFieldModule } from '@angular/material/form-field';
 import { ExpansionOverviewExample } from '../card1/expansion-overview-example';
 import { ExpansionOverview2 } from '../card2/expansion-overview2';
 import { ExpansionOverview3 } from '../card3/expansion-overview3';
@@ -28,6 +30,8 @@ import { TableAnkets } from '../ankets/table/table-anket';
   imports: [
     MatStepperModule,
     MatButtonModule,
+    MatSelectModule,
+    MatFormFieldModule,
     ExpansionOverviewExample,
     ExpansionOverview2,
     ExpansionOverview3,

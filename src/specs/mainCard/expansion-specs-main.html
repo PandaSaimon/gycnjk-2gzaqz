@@ -8,20 +8,21 @@
       <mat-panel-title>Основная информация</mat-panel-title>
       <!-- <mat-panel-description></mat-panel-description> -->
     </mat-expansion-panel-header>
-    <mat-form-field class="example-form-field">
+    <mat-form-field class="example-form-field" appearance="outline">
       <mat-label>Название спецификации</mat-label>
       <input matInput type="text" value="000615">
     </mat-form-field>
-    <mat-form-field  class="example-form-field">
+    <mat-form-field  class="example-form-field" appearance="outline">
       <mat-label>Заказ 1С</mat-label>
       <mat-select>
         <mat-option value="0000033763">0000033763</mat-option>
         <mat-option value="0000033762">0000033762</mat-option>
         <mat-option value="0000033761">0000033761</mat-option>
         <mat-option value="0000033760">0000033760</mat-option>
+        <mat-option value=""></mat-option>
       </mat-select>
     </mat-form-field>
-    <mat-form-field  class="example-form-field">
+    <mat-form-field  class="example-form-field" appearance="outline">
       <mat-label>Вид прайса</mat-label>
       <mat-select value="Обычный">
         <mat-option value="Обычный">Обычный</mat-option>
@@ -29,14 +30,14 @@
         <mat-option value="Спецпозиции 2">Спецпозиции 2</mat-option>
       </mat-select>
     </mat-form-field>
-    <mat-form-field  class="example-form-field">
+    <mat-form-field  class="example-form-field" appearance="outline">
       <mat-label>Тип прайса</mat-label>
       <mat-select value="Текущий">
         <mat-option value="Предыдущий">Предыдущий</mat-option>
         <mat-option value="Текущий">Текущий</mat-option>
       </mat-select>
     </mat-form-field>
-    <mat-form-field  class="example-form-field">
+    <mat-form-field  class="example-form-field" appearance="outline">
       <mat-label>Страна резидента</mat-label>
       <mat-select value="Россия">
         <mat-option value="Армения">Армения</mat-option>
@@ -48,7 +49,7 @@
         <mat-option value="Узбекистан">Узбекистан</mat-option>
       </mat-select>
     </mat-form-field>
-    <mat-form-field  class="example-form-field">
+    <mat-form-field  class="example-form-field" appearance="outline">
       <mat-label>Поставщик</mat-label>
       <mat-select value="PT">
         <mat-option value="PT">PT</mat-option>
@@ -58,6 +59,7 @@
         <mat-option value="ТОО">ТОО</mat-option>
       </mat-select>
     </mat-form-field>
+    <button mat-button style="display: block;">Добавить площадку</button>
   </mat-expansion-panel>
 </mat-accordion>
 

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MatIconModule } from '@angular/material/icon';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { TabGroupDynamicHeightExample } from '../tab1/tab-group-spec-1';
 
@@ -9,7 +10,7 @@ import { TabGroupDynamicHeightExample } from '../tab1/tab-group-spec-1';
   selector: 'expansion-specs-1',
   templateUrl: 'expansion-specs-1.html',
   standalone: true,
-  imports: [MatExpansionModule, TabGroupDynamicHeightExample],
+  imports: [MatIconModule, MatExpansionModule, TabGroupDynamicHeightExample],
 })
 export class ExpansionSpec1 {
   panelOpenState = false;

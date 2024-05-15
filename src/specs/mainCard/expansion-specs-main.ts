@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatSelectModule } from '@angular/material/select';
 import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
 
 /**
  * @title Basic expansion panel
@@ -11,7 +12,7 @@ import { MatInputModule } from '@angular/material/input';
   templateUrl: 'expansion-specs-main.html',
   styleUrl: 'expansion-specs-main.css', 
   standalone: true,
-  imports: [MatExpansionModule, MatSelectModule, MatInputModule],
+  imports: [MatExpansionModule, MatSelectModule, MatInputModule, MatButtonModule],
 })
 export class ExpansionSpecMain {}
 

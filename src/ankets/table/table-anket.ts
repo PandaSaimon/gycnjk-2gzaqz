@@ -8,14 +8,16 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import {animate, state, style, transition, trigger} from '@angular/animations';
 import { MatIconModule } from '@angular/material/icon';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { TableParams } from '../tableParameter/table-params';
 
 export interface Parameter {
+  id: number;
   key: string;
   value: string;
+  platform: Platform|null;
 }
 
 export interface Platform {
-  name: string;
   parameters: Parameter[]|null;
 }
 
@@ -23,7 +25,7 @@ export interface PeriodicElement {
   name: string;
   id: number;
   version: number;
-  platforms: Platform[]|null;
+  parameters: Parameter[];
 }
 
 const ELEMENT_DATA: PeriodicElement[] = [
@@ -31,52 +33,121 @@ const ELEMENT_DATA: PeriodicElement[] = [
     id: 1,
     name: 'Анкета 1',
     version: 0,
-    platforms: [
+    parameters: [
       {
-        name: "Площадка 1",
-        parameters: [
-          {
-            key: "Параметр 1",
-            value: "Значение 1"
-          },
-          {
-            key: "Параметр 2",
-            value: "Значение 2"
-          },
-        ]
+        id: 1,
+        key: "Параметр 1",
+        value: "Значение 1",
+        platform: null
       },
       {
-        name: "Площадка 2",
-        parameters: [
-          {
-            key: "Параметр 1",
-            value: "Значение 1"
-          },
-          {
-            key: "Параметр 2",
-            value: "Значение 2"
-          },
-        ]
+        id: 2,
+        key: "Параметр 2",
+        value: "Значение 2",
+        platform: null
+      },
+      {
+        id: 3,
+        key: "Площадка 1",
+        value: "",
+        platform: {
+          parameters: [
+            {
+              id: 1,
+              key: "Параметр 1",
+              value: "Значение 1",
+              platform: null
+            },
+            {
+              id: 2,
+              key: "Параметр 2",
+              value: "Значение 2",
+              platform: null
+            },
+          ]
+        }
+      },
+      {
+        id: 4,
+        key: "Площадка 2",
+        value: "",
+        platform: {
+          parameters: [
+            {
+              id: 1,
+              key: "Параметр 1",
+              value: "Значение 1",
+              platform: null
+            },
+            {
+              id: 2,
+              key: "Параметр 2",
+              value: "Значение 2",
+              platform: null
+            },
+          ]
+        }
       }
-    ]
+    ],
   },
   {
     id: 2,
     name: 'Анкета 2',
     version: 0,
-    platforms: [
+    parameters: [
       {
-        name: "Площадка 1",
-        parameters: [
-          {
-            key: "Параметр 1",
-            value: "Значение 1"
-          },
-          {
-            key: "Параметр 2",
-            value: "Значение 2"
-          },
-        ]
+        id: 1,
+        key: "Параметр 1",
+        value: "Значение 1",
+        platform: null
+      },
+      {
+        id: 2,
+        key: "Параметр 2",
+        value: "Значение 2",
+        platform: null
+      },
+      {
+        id: 3,
+        key: "Площадка 1",
+        value: "",
+        platform: {
+          parameters: [
+            {
+              id: 1,
+              key: "Параметр 1",
+              value: "Значение 1",
+              platform: null
+            },
+            {
+              id: 2,
+              key: "Параметр 2",
+              value: "Значение 2",
+              platform: null
+            },
+          ]
+        }
+      },
+      {
+        id: 4,
+        key: "Площадка 2",
+        value: "",
+        platform: {
+          parameters: [
+            {
+              id: 1,
+              key: "Параметр 1",
+              value: "Значение 1",
+              platform: null
+            },
+            {
+              id: 2,
+              key: "Параметр 2",
+              value: "Значение 2",
+              platform: null
+            },
+          ]
+        }
       }
     ]
   },
@@ -84,19 +155,60 @@ const ELEMENT_DATA: PeriodicElement[] = [
     id: 3,
     name: 'Анкета 3',
     version: 0,
-    platforms: [
+    parameters: [
       {
-        name: "Площадка 1",
-        parameters: [
-          {
-            key: "Параметр 1",
-            value: "Значение 1"
-          },
-          {
-            key: "Параметр 2",
-            value: "Значение 2"
-          },
-        ]
+        id: 1,
+        key: "Параметр 1",
+        value: "Значение 1",
+        platform: null
+      },
+      {
+        id: 2,
+        key: "Параметр 2",
+        value: "Значение 2",
+        platform: null
+      },
+      {
+        id: 3,
+        key: "Площадка 1",
+        value: "",
+        platform: {
+          parameters: [
+            {
+              id: 1,
+              key: "Параметр 1",
+              value: "Значение 1",
+              platform: null
+            },
+            {
+              id: 2,
+              key: "Параметр 2",
+              value: "Значение 2",
+              platform: null
+            },
+          ]
+        }
+      },
+      {
+        id: 4,
+        key: "Площадка 2",
+        value: "",
+        platform: {
+          parameters: [
+            {
+              id: 1,
+              key: "Параметр 1",
+              value: "Значение 1",
+              platform: null
+            },
+            {
+              id: 2,
+              key: "Параметр 2",
+              value: "Значение 2",
+              platform: null
+            },
+          ]
+        }
       }
     ]
   },
@@ -104,21 +216,62 @@ const ELEMENT_DATA: PeriodicElement[] = [
     id: 4,
     name: 'Анкета 4',
     version: 0,
-    platforms: [
+    parameters: [
       {
-        name: "Площадка 1",
-        parameters: [
-          {
-            key: "Параметр 1",
-            value: "Значение 1"
-          },
-          {
-            key: "Параметр 2",
-            value: "Значение 2"
-          },
-        ]
+        id: 1,
+        key: "Параметр 1",
+        value: "Значение 1",
+        platform: null
+      },
+      {
+        id: 2,
+        key: "Параметр 2",
+        value: "Значение 2",
+        platform: null
+      },
+      {
+        id: 3,
+        key: "Площадка 1",
+        value: "",
+        platform: {
+          parameters: [
+            {
+              id: 1,
+              key: "Параметр 1",
+              value: "Значение 1",
+              platform: null
+            },
+            {
+              id: 2,
+              key: "Параметр 2",
+              value: "Значение 2",
+              platform: null
+            },
+          ]
+        }
+      },
+      {
+        id: 4,
+        key: "Площадка 2",
+        value: "",
+        platform: {
+          parameters: [
+            {
+              id: 1,
+              key: "Параметр 1",
+              value: "Значение 1",
+              platform: null
+            },
+            {
+              id: 2,
+              key: "Параметр 2",
+              value: "Значение 2",
+              platform: null
+            },
+          ]
+        }
       }
-    ]
+    ],
   },
 ];
 
@@ -137,11 +290,10 @@ const ELEMENT_DATA: PeriodicElement[] = [
     ]),
   ],
   standalone: true,
-  imports: [MatTableModule, MatButtonModule, MatCheckboxModule, MatSelectModule, MatFormFieldModule, MatIconModule, MatExpansionModule],
+  imports: [MatTableModule, MatButtonModule, MatCheckboxModule, MatSelectModule, MatFormFieldModule, MatIconModule, MatExpansionModule, TableParams],
 })
 export class TableAnkets {
   displayedColumns: string[] = ['select', 'name', 'version', 'expand'];
-  displayedColumns2: string[] = ['key', 'value'];
   dataSource = ELEMENT_DATA;
   selection = new SelectionModel<PeriodicElement>(true, []);
   expandedElement: PeriodicElement | null;

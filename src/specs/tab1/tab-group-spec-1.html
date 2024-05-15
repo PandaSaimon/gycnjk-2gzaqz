@@ -1,18 +1,35 @@
 <!-- #docregion dynamic-height -->
 <mat-tab-group dynamicHeight color="accent">
   <!-- #enddocregion dynamic-height -->
-  <mat-tab label="Sandbox">
+  <mat-tab>
+    <ng-template mat-tab-label>Sandbox
+      <div style="float: right;">
+        <button mat-icon-button aria-label="Удалить" style="border: none; background-color: inherit;" (click)="$event.stopPropagation()">
+          <mat-icon>close</mat-icon>
+        </button>
+      </div>
+    </ng-template>
     <!-- <grid-list-overview-example></grid-list-overview-example> -->
     <div class="toggles">
-      <mat-form-field class="example-form-field">
+      <mat-form-field class="example-form-field" appearance="outline">
         <mat-label>Название</mat-label>
         <input matInput type="text" value="Площадка 1 Sandbox">
       </mat-form-field>
-      <mat-form-field class="example-form-field">
+      <mat-form-field  class="example-form-field" appearance="outline">
+        <mat-label>Номер заявки</mat-label>
+        <mat-select>
+          <mat-option value="0000033763">0000033763</mat-option>
+          <mat-option value="0000033762">0000033762</mat-option>
+          <mat-option value="0000033761">0000033761</mat-option>
+          <mat-option value="0000033760">0000033760</mat-option>
+          <mat-option value=""></mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field class="example-form-field" appearance="outline">
         <mat-label>Время действия лицензии, месяцев</mat-label>
         <input matInput type="number">
       </mat-form-field>
-      <mat-form-field class="example-form-field">
+      <mat-form-field class="example-form-field" appearance="outline">
         <mat-label>Уровень технической поддержки</mat-label>
         <mat-select value="STANDART">
           <mat-option value="ENHANCED, 24x7">ENHANCED, 24x7</mat-option>
@@ -26,22 +43,40 @@
         <mat-slide-toggle color="primary">Бессрочная</mat-slide-toggle>
         <mat-slide-toggle color="primary">Продление</mat-slide-toggle>
         <mat-slide-toggle color="primary">Активен</mat-slide-toggle>
+        <a mat-button href="https://sp.ptsecurity.com/dpic/PT%20Knowledgebase/Forms/AllItems.aspx?RootFolder=%2fdpic%2fPT%20Knowledgebase%2fProducts%2fPT%20NGFW%2fPresale%2fLicensing%20Policy&FolderCTID=0x0120008BBC07C77C5D424097972A001E049011/" target="_blank">Лицензионная политика</a>
       </div>
     </div>
     <table-basic-example></table-basic-example>
   </mat-tab>
-  <mat-tab label="SIEM">
+  <mat-tab>
+    <ng-template mat-tab-label>NGFW
+      <div style="float: right;">
+        <button mat-icon-button aria-label="Удалить" style="border: none; background-color: inherit;" (click)="$event.stopPropagation()">
+          <mat-icon>close</mat-icon>
+        </button>
+      </div>
+    </ng-template>
     <!-- <grid-list-overview-example></grid-list-overview-example> -->
     <div class="toggles">
-      <mat-form-field class="example-form-field">
+      <mat-form-field class="example-form-field" appearance="outline">
         <mat-label>Название</mat-label>
-        <input matInput type="text" value="Площадка 1 SIEM">
+        <input matInput type="text" value="Площадка 1 NGFW">
       </mat-form-field>
-      <mat-form-field class="example-form-field">
+      <mat-form-field  class="example-form-field" appearance="outline">
+        <mat-label>Номер заявки</mat-label>
+        <mat-select>
+          <mat-option value="0000033763">0000033763</mat-option>
+          <mat-option value="0000033762">0000033762</mat-option>
+          <mat-option value="0000033761">0000033761</mat-option>
+          <mat-option value="0000033760">0000033760</mat-option>
+          <mat-option value=""></mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field class="example-form-field" appearance="outline">
         <mat-label>Время действия лицензии, месяцев</mat-label>
         <input matInput type="number">
       </mat-form-field>
-      <mat-form-field  class="example-form-field">
+      <mat-form-field class="example-form-field" appearance="outline">
         <mat-label>Уровень технической поддержки</mat-label>
         <mat-select value="STANDART">
           <mat-option value="ENHANCED, 24x7">ENHANCED, 24x7</mat-option>
@@ -55,6 +90,59 @@
         <mat-slide-toggle color="primary">Бессрочная</mat-slide-toggle>
         <mat-slide-toggle color="primary">Продление</mat-slide-toggle>
         <mat-slide-toggle color="primary">Активен</mat-slide-toggle>
+      <!-- </div>
+      <div class="toggles"> -->
+        <mat-button-toggle-group name="View" value="selection" aria-label="Представление" style="margin-right: 25px;">
+          <mat-button-toggle value="selection">Подбор</mat-button-toggle>
+          <mat-button-toggle value="main">Основное</mat-button-toggle>
+        </mat-button-toggle-group>
+        <button mat-flat-button color="primary">Рассчитать</button>
+        <a mat-button href="https://sp.ptsecurity.com/dpic/PT%20Knowledgebase/Forms/AllItems.aspx?RootFolder=%2fdpic%2fPT%20Knowledgebase%2fProducts%2fPT%20NGFW%2fPresale%2fLicensing%20Policy&FolderCTID=0x0120008BBC07C77C5D424097972A001E049011/" target="_blank">Лицензионная политика</a>
+      </div>
+    </div>
+    <table-basic-example></table-basic-example>
+  </mat-tab>
+  <mat-tab>
+    <ng-template mat-tab-label>SIEM
+      <button mat-icon-button aria-label="Удалить" style="border: none; background-color: inherit;" (click)="$event.stopPropagation()">
+        <mat-icon>close</mat-icon>
+      </button>
+    </ng-template>
+    <!-- <grid-list-overview-example></grid-list-overview-example> -->
+    <div class="toggles">
+      <mat-form-field class="example-form-field" appearance="outline">
+        <mat-label>Название</mat-label>
+        <input matInput type="text" value="Площадка 1 SIEM">
+      </mat-form-field>
+      <mat-form-field  class="example-form-field" appearance="outline">
+        <mat-label>Номер заявки</mat-label>
+        <mat-select>
+          <mat-option value="0000033763">0000033763</mat-option>
+          <mat-option value="0000033762">0000033762</mat-option>
+          <mat-option value="0000033761">0000033761</mat-option>
+          <mat-option value="0000033760">0000033760</mat-option>
+          <mat-option value=""></mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field class="example-form-field" appearance="outline">
+        <mat-label>Время действия лицензии, месяцев</mat-label>
+        <input matInput type="number">
+      </mat-form-field>
+      <mat-form-field  class="example-form-field" appearance="outline">
+        <mat-label>Уровень технической поддержки</mat-label>
+        <mat-select value="STANDART">
+          <mat-option value="ENHANCED, 24x7">ENHANCED, 24x7</mat-option>
+          <mat-option value="ENHANCED, 8x5">ENHANCED, 8x5</mat-option>
+          <mat-option value="PREMIUM, 24x7">PREMIUM, 24x7</mat-option>
+          <mat-option value="PREMIUM, 8x5">PREMIUM, 8x5</mat-option>
+          <mat-option value="STANDART">STANDART</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <div class="toggles">
+        <mat-slide-toggle color="primary">Бессрочная</mat-slide-toggle>
+        <mat-slide-toggle color="primary">Продление</mat-slide-toggle>
+        <mat-slide-toggle color="primary">Активен</mat-slide-toggle>
+        <a mat-button href="https://sp.ptsecurity.com/dpic/PT%20Knowledgebase/Forms/AllItems.aspx?RootFolder=%2fdpic%2fPT%20Knowledgebase%2fProducts%2fPT%20NGFW%2fPresale%2fLicensing%20Policy&FolderCTID=0x0120008BBC07C77C5D424097972A001E049011/" target="_blank">Лицензионная политика</a>
       </div>
     </div>
     <table-basic-example></table-basic-example>

@@ -4,6 +4,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSelectModule } from '@angular/material/select';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatIconModule } from '@angular/material/icon';
 import {animate, state, style, transition, trigger} from '@angular/animations';
 
 export interface PeriodicElement {
@@ -75,10 +76,10 @@ const ELEMENT_DATA: PeriodicElement[] = [
     ]),
   ],
   standalone: true,
-  imports: [MatTableModule, MatButtonModule, MatSelectModule, MatInputModule, MatFormFieldModule],
+  imports: [MatTableModule, MatButtonModule, MatSelectModule, MatInputModule, MatFormFieldModule, MatIconModule],
 })
 export class TableBasicExample {
-  displayedColumns: string[] = ['position', 'articul', 'count', 'price', 'amount', 'rep', 'lessMonth'];
+  displayedColumns: string[] = ['position', 'articul', 'count', 'price', 'amount', 'rep', 'lessMonth', 'delete'];
   expandedElement: PeriodicElement | null;
   dataSource = ELEMENT_DATA;
 }

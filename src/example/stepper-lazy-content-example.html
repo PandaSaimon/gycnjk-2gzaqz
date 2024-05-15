@@ -3,9 +3,31 @@
     <form [formGroup]="firstFormGroup">
       <ng-template matStepLabel>Выбор анкет</ng-template>
       <ng-template matStepContent>
-        <p>This content was rendered lazily</p>
-        <table-anket></table-anket>
-        <button mat-button matStepperNext>К следующему шагу</button>
+        <mat-card style="padding: 15px;">
+          <mat-form-field class="example-form-field" appearance="outline">
+            <mat-label>Контрагент</mat-label>
+            <mat-select>
+              <mat-option value="1">Заказчик 1</mat-option>
+              <mat-option value="2">Заказчик 2</mat-option>
+              <mat-option value="3">Заказчик 3</mat-option>
+              <mat-option value="4">Заказчик 4</mat-option>
+              <mat-option value="5">Заказчик 5</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </mat-card>
+        <br>
+        <mat-card style="padding: 15px;">
+          <mat-card-header>
+            <mat-card-title>Анкеты</mat-card-title>
+          </mat-card-header>
+          <table-anket style="margin-top: 15px;"></table-anket>
+        </mat-card>
+        <br>
+        <mat-card fxLayout="row" fxLayoutGap="5%" class="footer">
+          <mat-card-actions>
+            <button mat-button matStepperNext>К следующему шагу</button>
+          </mat-card-actions>
+        </mat-card>
       </ng-template>
     </form>
   </mat-step>
