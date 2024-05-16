@@ -1,18 +1,18 @@
 import { Component } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 import { MatExpansionModule } from '@angular/material/expansion';
-import { TabGroupDynamicHeight2 } from '../tab2/tab-group-dynamic-height-2';
+import { TabGroupDynamicHeightExample } from '../tab1/tab-group-spec-1';
 
 /**
  * @title Basic expansion panel
  */
 @Component({
-  selector: 'expansion-overview2',
-  templateUrl: 'expansion-overview2.html',
+  selector: 'expansion-specs-0',
+  templateUrl: 'expansion-specs-0.html',
   standalone: true,
-  imports: [MatIconModule, MatExpansionModule, TabGroupDynamicHeight2],
+  imports: [MatIconModule, MatExpansionModule, TabGroupDynamicHeightExample],
 })
-export class ExpansionOverview2 {
+export class ExpansionSpec0 {
   panelOpenState = false;
 }
 

@@ -7,6 +7,9 @@
     <mat-expansion-panel-header>
       <mat-panel-title> Площадка 2</mat-panel-title>
       <mat-panel-description> 3 продукта </mat-panel-description>
+      <button mat-icon-button aria-label="Удалить" style="margin-right: 15px; border: none; background-color: inherit;" (click)="$event.stopPropagation()">
+        <mat-icon>delete</mat-icon>
+      </button>
     </mat-expansion-panel-header>
     <tab-group-dynamic-height-2></tab-group-dynamic-height-2>
   </mat-expansion-panel>

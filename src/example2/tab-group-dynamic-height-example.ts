@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MatIconModule } from '@angular/material/icon';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatButtonModule } from '@angular/material/button';
 import { GridListOverviewExample } from '../grid1/grid-list-overview-example';
@@ -13,6 +14,7 @@ import { TableBasicExample } from '../table/table-basic-example';
   styleUrl: 'tab-group-dynamic-height-example.css',
   standalone: true,
   imports: [
+    MatIconModule,
     MatTabsModule,
     MatButtonModule,
     GridListOverviewExample,

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatButtonModule } from '@angular/material/button';
@@ -7,6 +8,23 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatSelectModule } from '@angular/material/select';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { TableNGFW } from '../table ngfw/table-ngfw';
+import { MatCardModule } from '@angular/material/card';
+import { MatTableModule } from '@angular/material/table';
+
+export interface PeriodicElement {
+  articule: string;
+  description: string;
+  amount: number;
+}
+
+const ELEMENT_DATA: PeriodicElement[] = [
+  {
+    articule: 'Артикул 1', 
+    description: 'Описание 1', 
+    amount: 10000
+  }
+];
 
 /**
  * @title Tab group with dynamic height based on tab contents
@@ -17,6 +35,8 @@ import { MatButtonToggleModule } from '@angular/material/button-toggle';
   styleUrl: 'tab-group-spec-1.css',
   standalone: true,
   imports: [
+    FormsModule,
+    ReactiveFormsModule,
     MatIconModule,
     MatTabsModule,
     MatButtonModule,
@@ -24,10 +44,16 @@ import { MatButtonToggleModule } from '@angular/material/button-toggle';
     MatSlideToggleModule,
     MatSelectModule,
     MatInputModule,
-    MatButtonToggleModule
+    MatButtonToggleModule,
+    TableNGFW,
+    MatCardModule,
+    MatTableModule,
   ],
 }) 
-export class TabGroupDynamicHeightExample {}
+export class TabGroupDynamicHeightExample {
+  viewMode?: string = "selection";
+  dataSource = ELEMENT_DATA;
+}
 
 /**  Copyright 2024 Google LLC. All Rights Reserved.
     Use of this source code is governed by an MIT-style license that

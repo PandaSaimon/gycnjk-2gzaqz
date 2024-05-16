@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { CurrencyPipe } from '@angular/common';
 import { MatTableModule } from '@angular/material/table';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSelectModule } from '@angular/material/select';
@@ -16,9 +15,7 @@ export interface PeriodicElement {
   price: number;
   nds: number;
   amount: number;
-  rep: string;
-  lessMonth: number;
-}
+} 
 
 const ELEMENT_DATA: PeriodicElement[] = [
   {
@@ -28,9 +25,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
     count: 1,
     price: 100000.00,
     nds: 0.00,
-    amount: 100000.00,
-    rep: '',
-    lessMonth: 0,
+    amount: 100000.00
   },
   {
     position: 2,
@@ -40,8 +35,6 @@ const ELEMENT_DATA: PeriodicElement[] = [
     price: 100000.00,
     nds: 0.00,
     amount: 100000.00,
-    rep: '',
-    lessMonth: 0,
   },
   {
     position: 3,
@@ -51,8 +44,6 @@ const ELEMENT_DATA: PeriodicElement[] = [
     price: 100000.00,
     nds: 0.00,
     amount: 100000.00,
-    rep: 'PT-NGFW-IPS-1050',
-    lessMonth: 6,
   },
   {
     position: 4,
@@ -62,8 +53,6 @@ const ELEMENT_DATA: PeriodicElement[] = [
     price: 100000.00,
     nds: 0.00,
     amount: 100000.00,
-    rep: '',
-    lessMonth: 0,
   },
 ];
 
@@ -71,9 +60,9 @@ const ELEMENT_DATA: PeriodicElement[] = [
  * @title Basic use of `<table mat-table>`
  */
 @Component({
-  selector: 'table-basic-example',
-  styleUrl: 'table-basic-example.css',
-  templateUrl: 'table-basic-example.html',
+  selector: 'table-ngfw-data',
+  styleUrl: 'table-ngfw-data.css',
+  templateUrl: 'table-ngfw-data.html',
   animations: [
     trigger('detailExpand', [
       state('collapsed,void', style({height: '0px', minHeight: '0'})),
@@ -82,21 +71,12 @@ const ELEMENT_DATA: PeriodicElement[] = [
     ]),
   ],
   standalone: true,
-  imports: [CurrencyPipe, MatTableModule, MatButtonModule, MatSelectModule, MatInputModule, MatFormFieldModule, MatIconModule],
+  imports: [MatTableModule, MatButtonModule, MatSelectModule, MatInputModule, MatFormFieldModule, MatIconModule],
 })
-export class TableBasicExample {
-  displayedColumns: string[] = ['position', 'articul', 'count', 'price', 'nds', 'amount', 'rep', 'lessMonth', 'delete'];
+export class TableNgfwData { 
+  displayedColumns: string[] = ['position', 'articul', 'count', 'price', 'nds', 'amount', 'delete'];
   expandedElement: PeriodicElement | null;
   dataSource = ELEMENT_DATA;
-  /** Gets the total cost of all transactions. */
-  
-  getTotalCount() {
-    return this.dataSource.length;
-  }
-
-  getTotalCost() {
-    return this.dataSource.map(t => t.amount).reduce((acc, value) => acc + value, 0);
-  }
 }
 
 /**  Copyright 2024 Google LLC. All Rights Reserved.

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MatIconModule } from '@angular/material/icon';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { TabGroupDynamicHeightExample } from '../example2/tab-group-dynamic-height-example';
 
@@ -9,7 +10,7 @@ import { TabGroupDynamicHeightExample } from '../example2/tab-group-dynamic-heig
   selector: 'expansion-overview-example',
   templateUrl: 'expansion-overview-example.html',
   standalone: true,
-  imports: [MatExpansionModule, TabGroupDynamicHeightExample],
+  imports: [MatIconModule, MatExpansionModule, TabGroupDynamicHeightExample],
 })
 export class ExpansionOverviewExample {
   panelOpenState = false;

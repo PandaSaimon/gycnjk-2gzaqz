@@ -47,6 +47,33 @@
       </div>
     </div>
     <table-basic-example></table-basic-example>
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>Техническая поддержка</mat-card-title>
+      </mat-card-header><table mat-table [dataSource]="dataSource" multiTemplateDataRows class="mat-elevation-z8">
+        <!--- Note that these columns can be defined in any order.
+              The actual rendered columns are set as a property on the row definition" -->
+      
+        <!-- articule Column -->
+        <ng-container matColumnDef="articule">
+          <th mat-header-cell *matHeaderCellDef>Артикул</th>
+          <td mat-cell *matCellDef="let element">{{element.articule}}</td>
+        </ng-container>
+        <!-- articule Column -->
+        <ng-container matColumnDef="description">
+          <th mat-header-cell *matHeaderCellDef>Описание</th>
+          <td mat-cell *matCellDef="let element">{{element.description}}</td>
+        </ng-container>
+        <!-- articule Column -->
+        <ng-container matColumnDef="amount">
+          <th mat-header-cell *matHeaderCellDef>Итого, с НДС</th>
+          <td mat-cell *matCellDef="let element">{{element.amount}}</td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="['articule', 'description', 'amount']"></tr>
+        <tr mat-row *matRowDef="let row; columns: ['articule', 'description', 'amount'];"></tr>
+      </table>
+    </mat-card>
   </mat-tab>
   <mat-tab>
     <ng-template mat-tab-label>NGFW
@@ -93,14 +120,45 @@
         <mat-slide-toggle color="primary">Активен</mat-slide-toggle>
       <!-- </div>
       <div class="toggles"> -->
-        <mat-button-toggle-group name="View" value="selection" aria-label="Представление" style="margin-right: 25px;">
+        <mat-button-toggle-group name="View" [(ngModel)]="viewMode" aria-label="Представление" style="margin-right: 25px;">
           <mat-button-toggle value="selection">Подбор</mat-button-toggle>
           <mat-button-toggle value="main">Основное</mat-button-toggle>
         </mat-button-toggle-group>
         <button mat-flat-button color="primary">Рассчитать</button>
       </div>
     </div>
-    <table-basic-example></table-basic-example>
+    @if(viewMode == "selection") {
+      <table-ngfw></table-ngfw>
+    } @else {
+      <table-basic-example></table-basic-example>
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title>Техническая поддержка</mat-card-title>
+        </mat-card-header><table mat-table [dataSource]="dataSource" multiTemplateDataRows class="mat-elevation-z8">
+          <!--- Note that these columns can be defined in any order.
+                The actual rendered columns are set as a property on the row definition" -->
+        
+          <!-- articule Column -->
+          <ng-container matColumnDef="articule">
+            <th mat-header-cell *matHeaderCellDef>Артикул</th>
+            <td mat-cell *matCellDef="let element">{{element.articule}}</td>
+          </ng-container>
+          <!-- articule Column -->
+          <ng-container matColumnDef="description">
+            <th mat-header-cell *matHeaderCellDef>Описание</th>
+            <td mat-cell *matCellDef="let element">{{element.description}}</td>
+          </ng-container>
+          <!-- articule Column -->
+          <ng-container matColumnDef="amount">
+            <th mat-header-cell *matHeaderCellDef>Итого, с НДС</th>
+            <td mat-cell *matCellDef="let element">{{element.amount}}</td>
+          </ng-container>
+  
+          <tr mat-header-row *matHeaderRowDef="['articule', 'description', 'amount']"></tr>
+          <tr mat-row *matRowDef="let row; columns: ['articule', 'description', 'amount'];"></tr>
+        </table>
+      </mat-card>
+    }
   </mat-tab>
   <mat-tab>
     <ng-template mat-tab-label>SIEM
@@ -146,6 +204,33 @@
       </div>
     </div>
     <table-basic-example></table-basic-example>
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>Техническая поддержка</mat-card-title>
+      </mat-card-header><table mat-table [dataSource]="dataSource" multiTemplateDataRows class="mat-elevation-z8">
+        <!--- Note that these columns can be defined in any order.
+              The actual rendered columns are set as a property on the row definition" -->
+      
+        <!-- articule Column -->
+        <ng-container matColumnDef="articule">
+          <th mat-header-cell *matHeaderCellDef>Артикул</th>
+          <td mat-cell *matCellDef="let element">{{element.articule}}</td>
+        </ng-container>
+        <!-- articule Column -->
+        <ng-container matColumnDef="description">
+          <th mat-header-cell *matHeaderCellDef>Описание</th>
+          <td mat-cell *matCellDef="let element">{{element.description}}</td>
+        </ng-container>
+        <!-- articule Column -->
+        <ng-container matColumnDef="amount">
+          <th mat-header-cell *matHeaderCellDef>Итого, с НДС</th>
+          <td mat-cell *matCellDef="let element">{{element.amount}}</td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="['articule', 'description', 'amount']"></tr>
+        <tr mat-row *matRowDef="let row; columns: ['articule', 'description', 'amount'];"></tr>
+      </table>
+    </mat-card>
   </mat-tab>
   <mat-tab>
     <ng-template mat-tab-label style="max-width: 10px; min-width: 10px;">

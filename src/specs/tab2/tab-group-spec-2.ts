@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MatIconModule } from '@angular/material/icon';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatButtonModule } from '@angular/material/button';
 import { TableBasicExample } from '../table/table-basic-example';
@@ -15,6 +16,7 @@ import { MatInputModule } from '@angular/material/input';
   styleUrl: 'tab-group-spec-2.css',
   standalone: true,
   imports: [
+    MatIconModule,
     MatTabsModule,
     MatButtonModule,
     TableBasicExample,

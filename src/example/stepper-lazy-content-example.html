@@ -23,11 +23,11 @@
           <table-anket style="margin-top: 15px;"></table-anket>
         </mat-card>
         <br>
-        <mat-card fxLayout="row" fxLayoutGap="5%" class="footer">
-          <mat-card-actions>
+        <!-- <mat-card fxLayout="row" fxLayoutGap="5%" class="footer">
+          <mat-card-actions> -->
             <button mat-button matStepperNext>К следующему шагу</button>
-          </mat-card-actions>
-        </mat-card>
+          <!-- </mat-card-actions>
+        </mat-card> -->
       </ng-template>
     </form>
   </mat-step>
@@ -43,14 +43,22 @@
     <form [formGroup]="thirdFormGroup">
       <ng-template matStepLabel>Калькулятор</ng-template>
       <expansion-specs-main></expansion-specs-main>
+      <expansion-specs-0></expansion-specs-0>
       <expansion-specs-1></expansion-specs-1>
       <expansion-spec-2></expansion-spec-2>
-      <mat-card fxLayout="row" fxLayoutGap="5%" class="footer">
-        <mat-card-actions>
+      <mat-accordion>
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title>Файлы</mat-panel-title>
+          </mat-expansion-panel-header>
+        </mat-expansion-panel>
+      </mat-accordion>
+      <!-- <mat-card fxLayout="row" fxLayoutGap="5%" class="footer"> -->
+        <!-- <mat-card-actions> -->
           <button mat-button color="primary" matStepperPrevious>Назад</button>
           <button mat-button color="primary">Печать</button>
-        </mat-card-actions>
-      </mat-card>
+        <!-- </mat-card-actions>
+      </mat-card> -->
     </form>
   </mat-step>
 </mat-stepper>
