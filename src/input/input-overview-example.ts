@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormsModule } from '@angular/forms';
+import { MatCardModule } from '@angular/material/card';
 
 /**
  * @title Basic Inputs
@@ -11,7 +12,7 @@ import { FormsModule } from '@angular/forms';
   styleUrl: 'input-overview-example.css',
   templateUrl: 'input-overview-example.html',
   standalone: true,
-  imports: [FormsModule, MatFormFieldModule, MatInputModule],
+  imports: [FormsModule, MatFormFieldModule, MatInputModule, MatCardModule],
 })
 export class InputOverviewExample {}
 

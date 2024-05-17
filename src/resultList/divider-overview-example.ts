@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatListModule } from '@angular/material/list';
+import { MatCardModule } from '@angular/material/card';
 
 /**
  * @title Basic divider
@@ -9,7 +10,7 @@ import { MatListModule } from '@angular/material/list';
   selector: 'divider-overview-example',
   templateUrl: 'divider-overview-example.html',
   standalone: true,
-  imports: [MatListModule, MatDividerModule],
+  imports: [MatListModule, MatDividerModule, MatCardModule],
 })
 export class DividerOverviewExample {}
 

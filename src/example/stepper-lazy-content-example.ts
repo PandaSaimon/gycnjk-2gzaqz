@@ -9,10 +9,9 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatStepperModule } from '@angular/material/stepper';
 import { MatSelectModule } from '@angular/material/select';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { ExpansionDefault } from '../card0/expansion-default';
 import { ExpansionOverviewExample } from '../card1/expansion-overview-example';
 import { ExpansionOverview2 } from '../card2/expansion-overview2';
-import { ExpansionOverview3 } from '../card3/expansion-overview3';
-import { ExpansionOverview4 } from '../card4/expansion-overview4';
 import { ExpansionSpec0 } from '../specs/card default/expansion-specs-0';
 import { ExpansionSpec1 } from '../specs/card1/expansion-specs-1';
 import { ExpansionSpec2 } from '../specs/card2/expansion-spec-2';
@@ -34,10 +33,9 @@ import { MatExpansionModule } from '@angular/material/expansion';
     MatButtonModule,
     MatSelectModule,
     MatFormFieldModule,
+    ExpansionDefault,
     ExpansionOverviewExample,
     ExpansionOverview2,
-    ExpansionOverview3,
-    ExpansionOverview4,
     FormsModule,
     ReactiveFormsModule,
     ExpansionSpec0,

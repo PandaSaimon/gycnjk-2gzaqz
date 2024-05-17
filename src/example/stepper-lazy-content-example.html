@@ -33,6 +33,9 @@
   </mat-step>
   <mat-step [stepControl]="secondFormGroup" label="Конфигуратор">
     <form [formGroup]="secondFormGroup">
+      <button mat-button style="display: block;">Добавить площадку</button>
+      <br>
+      <expansion-default></expansion-default>
       <expansion-overview-example></expansion-overview-example>
       <expansion-overview2></expansion-overview2>
       <button mat-button matStepperPrevious>Назад</button>
