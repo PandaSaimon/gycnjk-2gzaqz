@@ -1,22 +1,10 @@
 import { Component } from '@angular/core';
-import { CurrencyPipe } from '@angular/common';
 import { MatTableModule } from '@angular/material/table';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSelectModule } from '@angular/material/select';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
-import { Catalog, DialogData } from '../catalog/catalog';
-import {animate, state, style, transition, trigger} from '@angular/animations';
-import {
-  MatDialog,
-  MAT_DIALOG_DATA,
-  MatDialogRef,
-  MatDialogTitle,
-  MatDialogContent,
-  MatDialogActions,
-  MatDialogClose,
-} from '@angular/material/dialog';
 
 export interface PeriodicElement {
   position: number;
@@ -81,25 +69,13 @@ const ELEMENT_DATA: PeriodicElement[] = [
  * @title Basic use of `<table mat-table>`
  */
 @Component({
-  selector: 'table-basic-example',
-  styleUrl: 'table-basic-example.css',
-  templateUrl: 'table-basic-example.html',
-  animations: [
-    trigger('detailExpand', [
-      state('collapsed,void', style({height: '0px', minHeight: '0'})),
-      state('expanded', style({height: '*'})),
-      transition('expanded <=> collapsed', animate('225ms cubic-bezier(0.4, 0.0, 0.2, 1)')),
-    ]),
-  ],
+  selector: 'catalog-table',
+  styleUrl: 'catalog-table.css',
+  templateUrl: 'catalog-table.html',
   standalone: true,
-  imports: [CurrencyPipe, MatTableModule, MatButtonModule, MatSelectModule, MatInputModule, MatFormFieldModule, MatIconModule, Catalog],
+  imports: [MatTableModule, MatButtonModule, MatSelectModule, MatInputModule, MatFormFieldModule, MatIconModule],
 })
 export class TableBasicExample {
-
-  constructor(public dialog: MatDialog) {}
-  animal: string;
-  name: string;
-
   displayedColumns: string[] = ['position', 'articul', 'count', 'price', 'nds', 'amount', 'rep', 'lessMonth', 'delete'];
   expandedElement: PeriodicElement | null;
   dataSource = ELEMENT_DATA;
@@ -107,21 +83,6 @@ export class TableBasicExample {
   
   getTotalCount() {
     return this.dataSource.length;
-  }
-
-  getTotalCost() {
-    return this.dataSource.map(t => t.amount).reduce((acc, value) => acc + value, 0);
-  }
-
-  openDialog(): void {
-    const dialogRef = this.dialog.open(Catalog, {
-      data: {name: this.name, animal: this.animal},
-    });
-
-    dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
-      this.animal = result;
-    });
   }
 }
 
