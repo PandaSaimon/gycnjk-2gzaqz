@@ -13,6 +13,7 @@ import {animate, state, style, transition, trigger} from '@angular/animations';
 export interface PeriodicElement {
   position: number;
   articul: string;
+  description: string;
   count: number;
   price: number;
   nds: number;
@@ -24,6 +25,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
   {
     position: 1,
     articul: 'Параметр 1',
+    description: "Описание 1",
     count: 1,
     price: 100000.00,
     nds: 0.00,
@@ -33,6 +35,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
   {
     position: 2,
     articul: 'Параметр 2',
+    description: "Описание 2",
     count: 1,
     price: 100000.00,
     nds: 0.00,
@@ -42,6 +45,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
   {
     position: 3,
     articul: 'PT-MPSIEM-REP-AGT250-PTNGFWIPS1050',
+    description: "Описание 3",
     count: 1,
     price: 100000.00,
     nds: 0.00,
@@ -51,6 +55,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
   {
     position: 4,
     articul: 'Параметр 4',
+    description: "Описание 4",
     count: 1,
     price: 100000.00,
     nds: 0.00,

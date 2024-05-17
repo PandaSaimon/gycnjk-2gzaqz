@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { TabGroupDynamicHeight2 } from '../tab2/tab-group-dynamic-height-2';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 /**
  * @title Basic expansion panel
@@ -10,7 +12,7 @@ import { TabGroupDynamicHeight2 } from '../tab2/tab-group-dynamic-height-2';
   selector: 'expansion-overview2',
   templateUrl: 'expansion-overview2.html',
   standalone: true,
-  imports: [MatIconModule, MatExpansionModule, TabGroupDynamicHeight2],
+  imports: [MatIconModule, MatExpansionModule, TabGroupDynamicHeight2, MatCheckboxModule, MatFormFieldModule],
 })
 export class ExpansionOverview2 {
   panelOpenState = false;
