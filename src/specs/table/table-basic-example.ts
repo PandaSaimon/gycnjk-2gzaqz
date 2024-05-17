@@ -6,7 +6,8 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
-import { Catalog, DialogData } from '../catalog/catalog';
+import { Catalog } from '../catalog/catalog';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 import {animate, state, style, transition, trigger} from '@angular/animations';
 import {
   MatDialog
@@ -22,6 +23,8 @@ export interface PeriodicElement {
   amount: number;
   rep: string;
   lessMonth: number;
+  indefinitely: boolean;
+  support: string;
 }
 
 const ELEMENT_DATA: PeriodicElement[] = [
@@ -35,6 +38,8 @@ const ELEMENT_DATA: PeriodicElement[] = [
     amount: 100000.00,
     rep: '',
     lessMonth: 0,
+    indefinitely: false,
+    support: "STANDART",
   },
   {
     position: 2,
@@ -46,6 +51,8 @@ const ELEMENT_DATA: PeriodicElement[] = [
     amount: 100000.00,
     rep: '',
     lessMonth: 0,
+    indefinitely: false,
+    support: "STANDART",
   },
   {
     position: 3,
@@ -57,6 +64,8 @@ const ELEMENT_DATA: PeriodicElement[] = [
     amount: 100000.00,
     rep: 'PT-NGFW-IPS-1050',
     lessMonth: 6,
+    indefinitely: false,
+    support: "STANDART",
   },
   {
     position: 4,
@@ -68,6 +77,8 @@ const ELEMENT_DATA: PeriodicElement[] = [
     amount: 100000.00,
     rep: '',
     lessMonth: 0,
+    indefinitely: false,
+    support: "STANDART",
   },
 ];
 
@@ -86,7 +97,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
     ]),
   ],
   standalone: true,
-  imports: [CurrencyPipe, MatTableModule, MatButtonModule, MatSelectModule, MatInputModule, MatFormFieldModule, MatIconModule, Catalog],
+  imports: [CurrencyPipe, MatTableModule, MatButtonModule, MatSelectModule, MatInputModule, MatFormFieldModule, MatIconModule, Catalog, MatCheckboxModule],
 })
 export class TableBasicExample {
 
@@ -94,7 +105,7 @@ export class TableBasicExample {
   animal: string;
   name: string;
 
-  displayedColumns: string[] = ['position', 'articul', 'count', 'price', 'nds', 'amount', 'rep', 'lessMonth', 'delete'];
+  displayedColumns: string[] = ['position', 'articul', 'count', 'price', 'nds', 'amount', 'rep', 'lessMonth', 'indefinitely', 'support', 'delete'];
   expandedElement: PeriodicElement | null;
   dataSource = ELEMENT_DATA;
   /** Gets the total cost of all transactions. */

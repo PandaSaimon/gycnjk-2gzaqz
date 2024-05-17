@@ -6,6 +6,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 
 export interface PeriodicElement {
   id: number;
@@ -64,7 +65,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
   styleUrl: 'catalog-table.css',
   templateUrl: 'catalog-table.html',
   standalone: true,
-  imports: [MatTableModule, MatButtonModule, MatSelectModule, MatInputModule, MatFormFieldModule, MatIconModule],
+  imports: [MatTableModule, MatButtonModule, MatSelectModule, MatInputModule, MatFormFieldModule, MatIconModule, MatCheckboxModule],
 })
 export class CatalogTable {
   displayedColumns: string[] = ['select', 'id', 'articul', 'description', 'price', 'nds', 'amount'];
@@ -74,7 +75,7 @@ export class CatalogTable {
   /** Gets the total cost of all transactions. */
   
   getTotalCount() {
-    return this.dataSource._filterData.length;
+    return this.selection.selected.length;
   }
 
   applyFilter(event: Event) {
