@@ -1,6 +1,5 @@
 import {Component, Inject} from '@angular/core';
 import {
-  MatDialog,
   MAT_DIALOG_DATA,
   MatDialogRef,
   MatDialogTitle,
@@ -15,6 +14,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { Folder } from '../folders/folder';
 import {MatSidenavModule} from '@angular/material/sidenav';
+import { CatalogTable } from '../catalogTable/catalog-table';
 
 export interface DialogData {
   animal: string;
@@ -38,6 +38,7 @@ export interface DialogData {
     MatButtonToggleModule,
     Folder,
     MatSidenavModule,
+    CatalogTable,
   ],
 })
 export class Catalog {

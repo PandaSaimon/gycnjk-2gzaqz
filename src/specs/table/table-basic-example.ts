@@ -9,13 +9,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { Catalog, DialogData } from '../catalog/catalog';
 import {animate, state, style, transition, trigger} from '@angular/animations';
 import {
-  MatDialog,
-  MAT_DIALOG_DATA,
-  MatDialogRef,
-  MatDialogTitle,
-  MatDialogContent,
-  MatDialogActions,
-  MatDialogClose,
+  MatDialog
 } from '@angular/material/dialog';
 
 export interface PeriodicElement {
@@ -116,6 +110,10 @@ export class TableBasicExample {
   openDialog(): void {
     const dialogRef = this.dialog.open(Catalog, {
       data: {name: this.name, animal: this.animal},
+      maxWidth: "100%",
+      width: "90%",
+      maxHeight: "100%",
+      height: "90%"
     });
 
     dialogRef.afterClosed().subscribe(result => {
