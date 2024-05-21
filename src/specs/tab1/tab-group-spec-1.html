@@ -1,10 +1,10 @@
 <!-- #docregion dynamic-height -->
-<mat-tab-group dynamicHeight color="accent">
+<mat-tab-group mat-stretch-tabs="false" dynamicHeight color="accent">
   <!-- #enddocregion dynamic-height -->
   <mat-tab>
-    <ng-template mat-tab-label>Sandbox
+    <ng-template mat-tab-label><div matBadge="!" matBadgeOverlap="false" matBadgeColor="warn">Sandbox</div>
       <div style="float: right;">
-        <button mat-icon-button aria-label="Удалить" style="border: none; background-color: inherit;" (click)="$event.stopPropagation()">
+        <button mat-icon-button aria-label="Удалить" style="margin-left: 15px; border: none; background-color: inherit;" (click)="$event.stopPropagation()">
           <mat-icon>close</mat-icon>
         </button>
       </div>

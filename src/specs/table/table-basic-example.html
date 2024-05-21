@@ -146,7 +146,9 @@
   </ng-container>
 
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-  <tr mat-row *matRowDef="let element; columns: displayedColumns;"
+  <tr mat-row 
+      [class.null-row]="element.amount == 0.00"
+      *matRowDef="let element; columns: displayedColumns;"
       class="example-element-row">
   </tr>
   <tr mat-row *matRowDef="let row; columns: ['expandedDetail']" class="example-detail-row"></tr>

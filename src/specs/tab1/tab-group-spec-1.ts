@@ -11,6 +11,7 @@ import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { TableNGFW } from '../table ngfw/table-ngfw';
 import { MatCardModule } from '@angular/material/card';
 import { MatTableModule } from '@angular/material/table';
+import { MatBadgeModule } from '@angular/material/badge';
 
 export interface PeriodicElement {
   articule: string;
@@ -48,6 +49,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
     TableNGFW,
     MatCardModule,
     MatTableModule,
+    MatBadgeModule,
   ],
 }) 
 export class TabGroupDynamicHeightExample {

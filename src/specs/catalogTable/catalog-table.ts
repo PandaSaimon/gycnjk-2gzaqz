@@ -68,7 +68,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
   imports: [MatTableModule, MatButtonModule, MatSelectModule, MatInputModule, MatFormFieldModule, MatIconModule, MatCheckboxModule],
 })
 export class CatalogTable {
-  displayedColumns: string[] = ['select', 'id', 'articul', 'description', 'price', 'nds', 'amount'];
+  displayedColumns: string[] = ['select', 'id', 'articul', 'description', 'price', 'count', 'nds', 'amount'];
   expandedElement: PeriodicElement | null;
   dataSource = new MatTableDataSource(ELEMENT_DATA);
   selection = new SelectionModel<PeriodicElement>(true, []);
